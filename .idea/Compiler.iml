@@ -2,10 +2,11 @@
 <module type="CPP_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/include/Postfix.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/include/DFA.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/include/NFA.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/include/Postfix.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/include/NFA.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/include/Postfix.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/include/testDFA.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/include/test.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/include/testPostfix.cpp" isTestSource="false" />
