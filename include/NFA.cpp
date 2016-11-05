@@ -4,7 +4,7 @@
 #include <set>
 #include "NFA.h"
 namespace meng {
-    void NFA::buildNFA() {//asd.f.g.b|*d?d.d.f.g...
+    void NFA::buildNFA() {
         std::stack <TupleStatePtr> s;
         for (auto ch: re) {
             switch (ch) {
@@ -83,7 +83,7 @@ namespace meng {
         StatePtr lr = std::get<1>(left);
         StatePtr rl = std::get<0>(right);
         lr->setOut1(rl);
-        lr->setC1('\\');
+        lr->setC1('^');
         s.push(std::make_tuple(std::get<0>(left), std::get<1>(right)));
     }
 
@@ -108,15 +108,15 @@ namespace meng {
         StatePtr rr = std::get<1>(right);
 
         nl->setOut1(ll);
-        nl->setC1('\\');
+        nl->setC1('^');
 
         nl->setOut2(rl);
-        nl->setC2('\\');
+        nl->setC2('^');
 
         lr->setOut1(nr);
-        lr->setC1('\\');
+        lr->setC1('^');
         rr->setOut1(nr);
-        rr->setC1('\\');
+        rr->setC1('^');
 
         s.push(std::make_tuple(nl, nr));
     }
@@ -138,16 +138,16 @@ namespace meng {
         mem.push_back(nl); mem.push_back(nr);
 
         nl->setOut1(topl);
-        nl->setC1('\\');
+        nl->setC1('^');
 
         topr->setOut2(topl);
-        topr->setC2('\\');
+        topr->setC2('^');
 
         topr->setOut1(nr);
-        topr->setC1('\\');
+        topr->setC1('^');
 
         nl->setOut2(nr);
-        nl->setC2('\\');
+        nl->setC2('^');
 
         s.push(std::make_tuple(nl, nr));
     }
@@ -169,13 +169,13 @@ namespace meng {
         mem.push_back(nl); mem.push_back(nr);
 
         nl->setOut1(topl);
-        nl->setC1('\\');
+        nl->setC1('^');
 
         topr->setOut2(topl);
-        topr->setC2('\\');
+        topr->setC2('^');
 
         topr->setOut1(nr);
-        topr->setC1('\\');
+        topr->setC1('^');
 
         s.push(std::make_tuple(nl, nr));
     }
@@ -197,13 +197,13 @@ namespace meng {
         mem.push_back(nl); mem.push_back(nr);
 
         nl->setOut1(topl);
-        nl->setC1('\\');
+        nl->setC1('^');
 
         topr->setOut1(nr);
-        topr->setC1('\\');
+        topr->setC1('^');
 
         nl->setOut2(nr);
-        nl->setC2('\\');
+        nl->setC2('^');
 
         s.push(std::make_tuple(nl, nr));
     }

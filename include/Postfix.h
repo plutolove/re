@@ -10,11 +10,9 @@ namespace meng {
     class Postfix {
     public:
         Postfix() {}
-
         ~Postfix() {}
 
         std::string addConcatenations(const std::string &in);
-
         std::string in2post(const std::string &in);
 
     private:

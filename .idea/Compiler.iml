@@ -6,8 +6,10 @@
       <sourceFolder url="file://$MODULE_DIR$/include/NFA.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/include/Postfix.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/include/NFA.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/include/testDFA.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/include/test.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/include/testPostfix.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/include/DFA.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/include/State.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CMakeLists.txt" isTestSource="false" />
     </content>
