@@ -51,6 +51,8 @@ namespace meng {
         void buildDFA();
 
         void print_graph();
+
+        bool Match(std::string& str, int index, int sta);
     };
 }
 

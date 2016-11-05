@@ -142,4 +142,23 @@ namespace meng {
             }
         }
     }
+
+    bool DFA::Match(std::string &str, int index, int sta) {
+        printf("%d  %d  %d\n", str.length(), index, sta);
+        if(index == str.length()) {
+            if(isend[sta]) {
+                puts("****************");
+                return true;
+            }
+            return false;
+        }
+        for(int i=0; i<50; i++) {
+            if(str[index] == graph[sta][i]) {
+                if(Match(str, index + 1, i)) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
 }

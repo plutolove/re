@@ -25,6 +25,12 @@ namespace meng {
         dfa.buildDFA();
         dfa.print_graph();
 
+        std::string str = "abdf";
+        if(dfa.Match(str, 0, 0)) {
+            puts("-------------");
+            print_message("successful");
+        }
+
         nfa.clear_vis();
         nfa.print_NFA(nfa.start);
         nfa.deleteAll();
