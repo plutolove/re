@@ -13,7 +13,6 @@ namespace meng {
         print_message(tmp.addConcatenations(re));
         print_message(tmp.in2post(re));
     }
-
     void testNFA(const std::string& re) {
         Postfix tmp;
         std::string post = tmp.in2post(re);
